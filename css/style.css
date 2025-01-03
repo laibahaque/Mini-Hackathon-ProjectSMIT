@@ -1,0 +1,624 @@
+/* Reset all margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+/* General styling for body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E6E6E6;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Full viewport height */
+}
+
+/* Navbar Styling */
+nav {
+  background-color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* Ensures navbar spans the full width */
+}
+
+nav .logo {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+nav .logo img {
+  width: 150px;
+  /* Adjust logo size */
+}
+
+nav .nav-links {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  /* Centers nav items horizontally */
+  align-items: center;
+  flex: 1;
+}
+
+nav .nav-links li {
+  margin: 0 15px;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+nav .nav-links a.active {
+  color: #FF2BB3;
+  /* Home link color */
+}
+
+nav .nav-links a:hover {
+  color: gray;
+}
+
+/* Add to Cart icon */
+nav .nav-links li:last-child {
+  font-size: 24px;
+  position: absolute;
+  right: 20px;  /* Adjust as needed */
+}
+
+/* Section styling */
+.content-section-one {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  width: 100%;
+  /* Full width */
+  max-width: 1200px;
+  /* Ensures the content doesn't stretch too wide */
+  margin: 0 auto;
+  /* Centers the content section */
+}
+
+.left-side {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center content */
+}
+
+.left-side h2 {
+  font-size: 45px;
+  font-weight: lighter;
+}
+
+.left-side p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: lighter;
+  color: rgb(75, 75, 75);
+}
+
+.right-side {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center content */
+}
+
+.right-side img {
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Waves styling */
+.ocean, .ocean-blue, .ocean-orange{
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.wave {
+  background: url("/images/download.svg");
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(2), .wave-blue:nth-of-type(2), .wave-orange:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(3), .wave-blue:nth-of-type(3), .wave-orange:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 20s -1s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Section styling for content-section-two */
+.content-section-two {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  width: 100%;
+  /* height:50%; */
+  margin: 0 auto;
+  position: relative; /* To position the waves */
+}
+
+.content-section-two .left-side {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  padding-top: 20px; /* Add more top padding */
+}
+
+.content-section-two .left-side img {
+  width: 85%;
+  margin: 15% auto 0; /* Increased top margin for more space above the image */
+  display: block;
+  border-radius: 30%; /* 30% border-radius for rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Darker box shadow */
+}
+
+.content-section-two .right-side {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-section-two .right-side h1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.content-section-two .right-side p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: lighter;
+  color: rgb(75, 75, 75);
+}
+
+.content-section-two .right-side .view-products-btn {
+  background-color: #00ABD1; /* Blue color for the button */
+  color: white; /* White text color */
+  padding: 10px 2px; /* Padding for the button */
+  margin-top: 30px;
+  width: 20%;
+  height: 50px; /* Corrected height value */
+  border-radius: 15%;
+}
+
+.content-section-two .right-side .view-products-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* New middle section styling */
+.middle-section {
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12% 10px;
+
+  align-items: center;
+}
+
+.blue-box {
+  width: 70%;
+  height: 100px; /* Increased height for better spacing */
+  border: 2px dashed #00ABD1;
+  border-radius: 15px;
+  margin-bottom: 10px; /* Increased gap for better separation */
+  display: flex;
+  flex-direction: column;  /* Stack h5 and p vertically */
+  justify-content: center; /* Center the content vertically */
+  align-items: center;     /* Center the content horizontally */
+  padding-top: 10px;       /* Padding at the top to shift content upwards */
+  text-align: center;
+}
+
+/* New styling for the count text inside the blue-box */
+.blue-box h5 {
+  color: #00ABD1; /* Blue color for the count text */
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the count text bold */
+}
+
+/* New styling for the description text inside the blue-box */
+.blue-box p {
+  color: #00ABD1; /* Blue color for the description text */
+  font-size: 11px; /* Adjust font size for the description */
+  font-weight: normal; /* Normal weight for the description */
+  text-align: center;
+}
+
+
+/* Blue waves styling */
+.wave-blue {
+  background: url("/images/bluewaves.svg");
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+}
+
+@keyframes wave-blue {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}/* Section styling for content-section-three */
+.content-section-three {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  width: 100%;
+  height: 24%;
+  margin: 0 auto;
+  position: relative; /* To position the waves */
+}
+
+.content-section-three .left-side {
+  width: 45%;
+  display: flex;
+  margin-left: 7%;
+  padding-top: 20px; /* Add more top padding */
+}
+
+.content-section-three .right-side {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Align items center horizontally */
+  /* margin-left: 8%; */
+}
+
+.content-section-three .left-side h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  
+}
+
+.content-section-three .left-side p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: lighter;
+  color: rgb(75, 75, 75);
+  line-height: 3;
+  /* text-align: center; */
+}
+
+/* Styling for image grid in content-section-three */
+/* Styling for image grid in content-section-three */
+.content-section-three .right-side .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default layout: 3 columns for the first row */
+  gap: 10px; /* Space between images */
+  justify-items: center; /* Centers images within their grid cells */
+}
+
+.content-section-three .right-side .grid--item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-section-three .right-side .grid--item img {
+  width: 150px; /* Makes sure images fit within their grid cells */
+  height: 150px;
+  border-radius: 10px; /* Optional: Adds rounded corners to the images */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for visual effect */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.content-section-three .right-side .grid--item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Adjust layout for second row (only two images) */
+.content-section-three .right-side .grid:nth-child(2) {
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for the second row */
+}
+
+/* Adjust layout for third row (three images again) */
+.content-section-three .right-side .grid:nth-child(3) {
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for the third row */
+}
+
+.wave-orange {
+  background: url("/images/orangewave.svg");
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+}
+
+/* Styling for the Product Slider */
+.product-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-item {
+  display: inline-block;
+  width: 33.33%; /* Each slide takes up one-third of the screen */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.slider-item img {
+  width: 85%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.slider-item h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.slider-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+.shop-now-btn {
+  background-color: #00ABD1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.shop-now-btn:hover {
+  background-color: #008C9E;
+}
+
+/* Navigation buttons */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.prev-btn, .next-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Zoom effect for the middle image */
+.slider-item.active img {
+  transform: scale(1.2); /* Zoom the middle image */
+}
+/* Cart Icon */
+#cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Modal Styling */
+.cart-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+}
+
+.cart-modal-content {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.cart-modal-content h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#cart-items {
+  margin-bottom: 20px;
+}
+
+#cart-total {
+  text-align: center;
+}
+
+#close-modal {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #FF2BB3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Show Modal */
+.cart-modal.show {
+  display: block;
+}.content-section-five {
+  display: flex;
+  justify-content: center; /* Centering the entire form box */
+  align-items: center; /* Vertically aligning the form */
+  padding: 50px 20px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative; 
+}
+.content-section-five {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.form-box {
+  background: #ffffff;
+  padding: 40px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.form-content {
+  flex: 1;
+  padding-right: 40px;
+  max-width: 50%;
+}
+
+.form-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-content label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #555;
+}
+
+.form-content input,
+.form-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-content input[type="radio"],
+.form-content input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle; /* Align radio and checkbox with the text */
+}
+
+.form-content .radio-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-content .radio-group input {
+  margin: 20px; /* Space between radio buttons */
+}
+
+.form-content .checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.form-content .checkbox-group input {
+  margin-right: 10px;
+}
+
+.form-content button {
+  padding: 12px 25px;
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.form-content button:hover {
+  background-color: #0077a7;
+}
+
+.product-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
