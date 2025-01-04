@@ -293,7 +293,7 @@ nav .nav-links li:last-child {
   justify-content: space-between;
   padding: 50px 20px;
   width: 100%;
-  height: 24%;
+  height: 22%;
   margin: 0 auto;
   position: relative; /* To position the waves */
 }
@@ -302,7 +302,7 @@ nav .nav-links li:last-child {
   width: 45%;
   display: flex;
   margin-left: 7%;
-  padding-top: 20px; /* Add more top padding */
+  padding-top: 5px; /* Add more top padding */
 }
 
 .content-section-three .right-side {
@@ -322,10 +322,9 @@ nav .nav-links li:last-child {
 
 .content-section-three .left-side p {
   font-size: 15px;
-  line-height: 1.6;
   font-weight: lighter;
   color: rgb(75, 75, 75);
-  line-height: 3;
+  line-height: 2;
   /* text-align: center; */
 }
 
@@ -376,7 +375,15 @@ nav .nav-links li:last-child {
   transform: translate3d(0, 0, 0);
   opacity: 0.8;
 }
-
+.content-section-four {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  width: 100%;
+  height: 20%;
+  margin: 0 auto;
+  position: relative; /* To position the waves */
+}
 /* Styling for the Product Slider */
 .product-slider {
   position: relative;
@@ -505,7 +512,7 @@ nav .nav-links li:last-child {
 /* Show Modal */
 .cart-modal.show {
   display: block;
-}.content-section-five {
+}.content-section-six {
   display: flex;
   justify-content: center; /* Centering the entire form box */
   align-items: center; /* Vertically aligning the form */
@@ -514,7 +521,7 @@ nav .nav-links li:last-child {
   margin: 0 auto;
   position: relative; 
 }
-.content-section-five {
+.content-section-six {
   display: flex;
   justify-content: center;
   align-items: center;
