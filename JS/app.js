@@ -47,33 +47,6 @@ function submitContactForm(event) {
     }
 }
 
-// Function to submit contact form data to Realtime Database
-function submitContactFormToRTDB(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    if (name && email && message) {
-        // Submit to Realtime Database
-        const contactRef = ref(rtdb, 'contact_form_submissions');
-        push(contactRef, {
-            name: name,
-            email: email,
-            message: message,
-            timestamp: Date.now()
-        })
-        .then(() => {
-            alert('Your message has been sent!');
-            document.querySelector('form').reset();  // Reset the form after submission
-        })
-        .catch(error => {
-            console.error('Error submitting contact form:', error);
-        });
-    }
-}
-
 // Attach the submit event to the contact form for Firestore submission
 document.querySelector('form').addEventListener('submit', submitContactForm);
 
